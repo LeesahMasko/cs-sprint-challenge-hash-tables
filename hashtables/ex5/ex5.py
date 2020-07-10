@@ -1,12 +1,17 @@
+import os
+import pathlib
 # Your code here
 
 
-
+cache = {}
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    for file in files:
+        f = file[1]
+        if f not in cache:
+            cache[file]
+        else:
+            index[file_search].append(f)
+
 
     return result
 

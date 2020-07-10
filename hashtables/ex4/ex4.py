@@ -1,8 +1,13 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    result = []
+
+    for numb in a:
+        if numb != 0:
+            cache[numb] = 1
+            if -numb in cache:
+                result.append(abs(numb))
+
 
     return result
 
