@@ -1,8 +1,13 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    for array in arrays:
+        for i in array:
+            if i in cache:
+                cache[i] += 1
+            else:
+                cache[i] = 1
+
+    result = [num for num in cache if cache[num]==len(arrays)]
 
     return result
 
